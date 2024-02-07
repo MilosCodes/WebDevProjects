@@ -1,0 +1,23 @@
+.paragraphOne {
+    color: coral;
+}
+
+.paragraphTwo {
+    font-size: 2em;
+}
+
+.paragraphThree {
+    font-weight: 900;
+}
+
+.paragraphFour {
+    font-family: 'Caveat', cursive;
+}
+
+.paragraphFive {
+    text-align: right;
+}
+
+html {
+    font-size: 30px;
+}
