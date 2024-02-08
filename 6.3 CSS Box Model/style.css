@@ -1,0 +1,34 @@
+.divOne {
+    padding: 20px 20px 20px 20px;
+    border: 20px solid black;
+    padding: 20px 20px 20px 20px;
+}
+ p {
+    margin: 0px auto;
+    padding: 0px;
+ }
+.divTwo {
+    border: 10px solid black;
+    border-left: 20px solid black;
+    border-right: 20px solid black;
+    margin-left: 260px;
+}
+.divThree {
+    border: 10px solid black;
+    margin-left: 50px;
+}
+
+#cadetblue {
+    background-color: cadetblue;
+}
+#gold {
+    background-color: gold;
+}
+#indianred {
+    background-color: indianred;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+  }
