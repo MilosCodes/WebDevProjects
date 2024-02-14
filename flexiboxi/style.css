@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.one {
+    background-color: seagreen;
+    width: 30%;
+}
+.two {
+    background-color: saddlebrown;
+    width: 30%;
+}
+.three {
+    background-color: lightsalmon;
+    width: 40%;
+}
+
+.boldering {
+    color: aqua;
+}
