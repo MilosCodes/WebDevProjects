@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #40514e;
+    text-align: center;
+    font-family: "Merriweather", serif;
+}
+.top-header, .first-section, .second-section  {
+    width: 100%;
+    height: 400px;
+}
+.top-header {
+    /* background-color: aqua; */
+}
+.first-section {
+    /* background-color: rebeccapurple; */
+}
+.second-section {
+    /* background-color: green; */
+}
+.bottom-footer {
+    height: 150px;
+    background-color:#66bfbf;
+}
+.bottom-container {
+    background-color: #66bfbf;
+    padding: 50px 0 20px;
+}
+.copyright {
+    color: aliceblue;
+    padding-top: 20px;
+}
