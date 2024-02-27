@@ -31,19 +31,34 @@
     padding-top: 20px;
 }
 .title-text {
+    padding-top: 100px;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 5vh;
     color: #66bfbf;
 }
+.title-skill {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vh;
+    color: #66bfbf;
+}
+
 .underliner {
     text-decoration: underline;
 }
-.cloud-image {
-    width: 100px;
-    height: 40px;
+.top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 40px;
+}
+.bottom-cloud {
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
 }
 .mountain-container {
-    width: 598;
+    width: 589;
     height: 357px;
     position: relative;
 }
@@ -51,4 +66,10 @@
     width: 598;
     height: 357px;
     padding-bottom: 10px;
+}
+.class-explanation {
+
+}
+.skill-explanation {
+
 }
