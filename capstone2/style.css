@@ -30,3 +30,25 @@
     color: aliceblue;
     padding-top: 20px;
 }
+.title-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vh;
+    color: #66bfbf;
+}
+.underliner {
+    text-decoration: underline;
+}
+.cloud-image {
+    width: 100px;
+    height: 40px;
+}
+.mountain-container {
+    width: 598;
+    height: 357px;
+    position: relative;
+}
+.mountain-image {
+    width: 598;
+    height: 357px;
+    padding-bottom: 10px;
+}
