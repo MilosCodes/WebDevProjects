@@ -5,6 +5,12 @@
     text-align: center;
     font-family: "Merriweather", serif;
 }
+hr {
+    border: dotted #eaf6f6 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+}
 .top-header  {
     width: 100%;
     height: 560px;
@@ -28,6 +34,7 @@
     background-color: whitesmoke;
     height: 600px;
     width: 100%;
+    /* padding-left: 300px; */
 }
 .skill-section {
 
@@ -117,15 +124,15 @@
 
 .skill-h1 {
     padding-top: 20px;
-    text-align: center;
+    /* padding-right: 500px; */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 5vh;
     color: #66bfbf;
 }
 .cat-image {
+    float: left;
     width: 150px;
     height: 150px;
-    left-padding: 100px;
 }
 .cat-text {
     padding-top: 20px;
@@ -144,4 +151,11 @@
 }
 .skill-explanation {
 
+}
+.container-profile {
+    display: grid;
+    gap: 10px;
+    width: 50%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
 }
