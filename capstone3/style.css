@@ -1,0 +1,27 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+.main-container {
+    /* padding: 1px 1px 1px 1px; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.left-drawer {
+    width: 25%;
+    /* height: 800px; */
+    height: 100vh;
+    background-color: #CDFADB;
+}
+
+.main-view {
+    /* height: 800px; */
+    /* width: 900px; */
+    height: 100vh;
+    width: 75%;
+    background-color: #F6FDC3;
+}
+.backgroundCOLOR {
+    background-color: #CDFADB;
+}
