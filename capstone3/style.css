@@ -13,6 +13,8 @@
     /* height: 800px; */
     height: 100vh;
     background-color: #CDFADB;
+    display: grid;
+    grid-column-row: 4;
 }
 
 .main-view {
@@ -24,4 +26,13 @@
 }
 .backgroundCOLOR {
     background-color: #CDFADB;
+}
+
+.left-drawer-pagaraph {
+    color: #FF8080;
+    float: right;
+}
+.left-drawer-image {
+    width: 40px;
+    height: 40px;
 }
