@@ -13,8 +13,8 @@
     /* height: 800px; */
     height: 100vh;
     background-color: #CDFADB;
-    display: grid;
-    grid-column-row: 4;
+    /* display: grid; */
+    /* grid-column-row: 4; */
 }
 
 .main-view {
@@ -31,8 +31,24 @@
 .left-drawer-pagaraph {
     color: #FF8080;
     float: right;
+    padding-right: 15px;
 }
 .left-drawer-image {
-    width: 40px;
-    height: 40px;
+    float: right;
+    padding-top: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.left-drawer-container {
+    background-color: #CDFADB;
+    display: grid;
+    grid-template-columns: span 4;
+    grid-template-columns: span 4;
+    padding-top: 15px;
+    padding-left: 10px;
+    width: 30%;
+}
+.breaking-Point {
+    color: #F6FDC3;
 }
