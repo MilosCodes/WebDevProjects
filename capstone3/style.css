@@ -30,14 +30,14 @@
 
 .left-drawer-pagaraph {
     color: #FF8080;
-    float: right;
-    padding-right: 15px;
+    float: left;
+    padding-right: 10px;
 }
 .left-drawer-image {
-    float: right;
-    padding-top: 15px;
     width: 20px;
     height: 20px;
+    padding-right: 1000px;
+    float: right;
 }
 
 .left-drawer-container {
@@ -51,4 +51,21 @@
 }
 .breaking-Point {
     color: #F6FDC3;
+}
+
+.cat-image {
+    margin-top: -55px;
+    padding-left: 100px;
+    width: 200px;
+    height: 200px;
+}
+.cat-paragraph {
+    color: #FF8080;
+    width: 100px;
+    padding-top: 100px;
+    padding-left: 10px;
+}
+.h1-cat {
+    color: aqua;
+    font-size: 35px;
 }
