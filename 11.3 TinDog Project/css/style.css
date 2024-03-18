@@ -28,8 +28,22 @@
 }
 
 .iphone-style {
-  padding-top: 5px;
-  padding-bottom: 0px;
+  margin-right: -200px;
+  margin-top: -262px;
   height: 344px;
   width: 200px;
+}
+
+.display1 {
+  width: 500px;
+  padding-left: 200px;
+
+}
+
+.downloadBtn {
+  margin-top: 80px;
+}
+.appleBtn {
+  margin-left: -500px;
+  margin-top: 80px;
 }
