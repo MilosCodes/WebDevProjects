@@ -15,7 +15,6 @@
     background-position: 0% 50%;
   }
 }
-
 .icon-square {
   width: 3rem;
   height: 3rem;
@@ -28,10 +27,8 @@
 }
 
 .iphone-style {
-  margin-right: -200px;
-  margin-top: -262px;
-  height: 344px;
-  width: 200px;
+  height: 22em;
+  width: 13em;
 }
 
 .display1 {
