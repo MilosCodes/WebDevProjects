@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="javaScriptorum.js"> -->
-    <title>Document</title>
+    <link rel="stylesheet" href="javaScriptorum.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>FLEX&GRID</title>
 </head>
 <body>
-    
+    <div class="d-flex p-5 bd-highlight" style="background-color: teal; color: whitesmoke;">
+        <p>HELLO</p>
+        <p>MY name is</p>
+        <p>LOL</p>
+    </div>
+    <!-- d-inkine-flex is property of bootstrap that doesnt cover whole width of property window. That means border-color is only made by width of the property that has been initialized. like <p> element or <h> element -->
+    <div class="d-inline-flex p-2 bd-highlight" style="background-color: whitesmoke; color: teal;">
+        <p>HELLO, this is another but d-inline-flex</p>
+    </div>
+    <div class="d-flex flex-row bd-highlight mb-3 gap-5" style="background-color: aqua;">
+        <div class="p-2 bd-highlight" style="background-color: blueviolet; border-radius: 10%;"><p>Flex Item 1</p></div>
+        <div class="p-2 bd-highlight" style="background-color: brown; border-radius: 20%;"><p>Flex Item 2</p></div>
+        <div class="p-2 bd-highlight"><p>Flex Item 3</p></div>
+    </div>
+    <div class="d-flex flex-row-reverse bd-highlight mb-3" style="background-color: beige;">
+        <div class="p-2 bd-highlight"><p>Flex Item 1</p></div>
+        <div class="p-2 bd-highlight"><p>Flex Item 2</p></div>
+        <div class="p-2 bd-highlight"><p>Flex Item 3</p></div>
+    </div>
+    <div class=" d-flex flex-column mb-3 gap-5" style="background-color: aquamarine;">
+        <div class="p-2 bd-highlight" style="background-color: brown;"><p>this is flexColumn1</p></div>
+        <div class="p-2 bd-highlight"><p>this is flexcolumn2</p></div>
+        <div class="p-2 bd-highlight"><p>this is flexcolumn3</p></div>
+    </div>
+    <div class="d-grid gap-3">
+        <div class="bg-light border p-5" style="background-color: bisque;"><p>this is grid 1</p></div>
+        <div class="p-2"><p>this is grid 2</p></div>
+        <div class="p-2"><p>this is grid 3</p></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
