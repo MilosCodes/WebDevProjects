@@ -21,14 +21,20 @@ const randomListEl = document.getElementById("random-list")
 addButton.addEventListener("click", function(){
     let inputValue = inputFieldEl.value
     push(randomListInDB, inputValue)
-    clearInputField()
+    
     console.log(inputValue)
-    appendItem(inputValue)
+    
     
 })
     onValue(randomListInDB, function(snapshot) {
+
         let randomListArray = Object.values(snapshot.val())
-        console.log(randomListArray.length)
+        clearInputField()
+        for (let i=0; i<randomListArray.length; i++) {
+            let currentList = randomListArray[i]
+            appendItem(currentList)
+        }
+        
 })
 
 function appendItem(item) {
