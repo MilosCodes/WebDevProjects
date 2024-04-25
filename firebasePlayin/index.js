@@ -12,12 +12,29 @@ const database = getDatabase(app)
 
 const randomListInDB = ref(database, "randomList")
 
+
 const inputFieldEl = document.getElementById("input-field")
 const addButton = document.getElementById("add-button")
+const randomListEl = document.getElementById("random-list")
 
 
 addButton.addEventListener("click", function(){
     let inputValue = inputFieldEl.value
     push(randomListInDB, inputValue)
+    clearInputField()
     console.log(inputValue)
+    appendItem(inputValue)
+    
 })
+    onValue(randomListInDB, function(snapshot) {
+        let randomListArray = Object.values(snapshot.val())
+        console.log(randomListArray.length)
+})
+
+function appendItem(item) {
+    randomListEl.innerHTML += `<li>${item}</li>`
+}
+
+function clearInputField() {
+    inputFieldEl.value = ""
+}
