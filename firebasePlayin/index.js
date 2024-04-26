@@ -21,26 +21,36 @@ const randomListEl = document.getElementById("random-list")
 addButton.addEventListener("click", function(){
     let inputValue = inputFieldEl.value
     push(randomListInDB, inputValue)
-    
     console.log(inputValue)
-    
+    clearInputField()
     
 })
-    onValue(randomListInDB, function(snapshot) {
 
-        let randomListArray = Object.values(snapshot.val())
-        clearInputField()
-        for (let i=0; i<randomListArray.length; i++) {
-            let currentList = randomListArray[i]
-            appendItem(currentList)
-        }
+onValue(randomListInDB, function(snapshot) {
+    let itemsArray = Object.entries(snapshot.val()) 
+
+    clearRandomList()
+    for (let i=0; i<itemsArray.length;i++) {
+        let currentItem = itemsArray[i]
+        let currentItemID = currentItem[0]
+        let currentItemValue = currentItem[1]
         
+        appendItem(currentItem)
+    }
 })
-
 function appendItem(item) {
-    randomListEl.innerHTML += `<li>${item}</li>`
+    let itemID = item[0]
+    let itemValue = item[1]
+    // randomListEl.innerHTML += `<li>${item}</li>`
+    let newEl = document.createElement("li")
+    
+    newEl.textContent = itemValue
+    randomListEl.append(newEl)
 }
 
 function clearInputField() {
     inputFieldEl.value = ""
+}
+function clearRandomList() {
+    randomListEl.innerHTML = ""
 }
