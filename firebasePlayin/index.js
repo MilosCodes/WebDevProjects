@@ -70,43 +70,59 @@ const addButtonEl = document.getElementById("add-button")
 const listEl = document.getElementById("some-list")
 
 addButtonEl.addEventListener("click", function() {
+    addingInputValue()
+    
+})
+
+inputFieldEl.addEventListener("keypress", function(event) {
+
+    if (event.key === "Enter") {
+        event.preventDefault()
+        document.getElementById("add-button").click()
+    }
+
+})
+
+function addingInputValue() {
+    clearListField()
     let inputValue = inputFieldEl.value
     push(listInDB, inputValue)
     console.log(inputValue)
-    clearInputField()
-})
 
+}
 //call function onValue, with snapshot, use object inside to be enteries (create an array), so i can change that object from keys to values. 
 onValue(listInDB, function(snapshot) {
-    let itemsArray = Object.entries(snapshot.val())
-    clearListField()
+
+    if (snapshot.exists()) {
+     let itemsArray = Object.entries(snapshot.val())
+    
     for (let i=0; i < itemsArray.length; i++) {
         let currentItem = itemsArray[i]
-        let itemsIDs = currentItem[0]
-        let itemsValues = currentItem[1]
         appendItem(currentItem)
-    }
-    
-})
+            }
+        }  else {
+            listEl.innerHTML = "List does not exist..yet"
+        }
+    })
 
 //make function appendItem() that takes value of item and appends. call it inside of function onValue in loop.
 function appendItem(item) {
-    let itemsID = item[0]
-    let itemsValue = item[1]
-    
+    let itemID = item[0]
+    let itemValue = item[1]
+    clearInputField()
     let newEl = document.createElement("li")
-    newEl.textContent = itemsValue
+    newEl.textContent = itemValue
     newEl.classList.add = "story"
     newEl.addEventListener("dblclick", function() {
-        let exactLocationOfRandomListID = ref(database, "someList")
-        remove(exactLocationOfRandomListID, `someList/${itemsID}`)
+        let exactLocationOfItemInDB = ref(database, `someList/${itemID}`)
+         remove(exactLocationOfItemInDB)
     })
     listEl.append(newEl)
 }
 
 // make function clearInputField() that clears input field and call it in. use textContent to append new item
 function clearInputField() {
-    inputFieldEl.textContent = ""
+    inputFieldEl.innerHTML = ""
 }
 
 function clearListField() {

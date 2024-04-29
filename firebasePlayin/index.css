@@ -1,4 +1,4 @@
-
+body html { user-select: none;}
 
 ul {
     list-style: none;
@@ -17,3 +17,21 @@ ul li {
     font-size: 20px;
     box-shadow: 0px 1px 4px rgba(o, o, o, o.2);
 }
+
+.btn-primary:hover {
+    background-color: #432000;
+}
+
+ul li:hover {
+    background-color: #FFECC7;
+    cursor: pointer;
+}
+
+#photo{
+    margin-top: 200px;
+    margin-left: 450px;
+ }
+ #upload{
+    margin-top: 20px;
+    margin-left: 450px;
+ }
