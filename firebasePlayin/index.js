@@ -71,7 +71,6 @@ const listEl = document.getElementById("some-list")
 
 addButtonEl.addEventListener("click", function() {
     addingInputValue()
-    
 })
 
 inputFieldEl.addEventListener("keypress", function(event) {
@@ -88,9 +87,8 @@ function addingInputValue() {
     let inputValue = inputFieldEl.value
     push(listInDB, inputValue)
     console.log(inputValue)
-
 }
-//call function onValue, with snapshot, use object inside to be enteries (create an array), so i can change that object from keys to values. 
+//CALL function onValue, that has input listInDB and inside function (snapshot), after that make if (snapshot.exists() that have const itemsArray that have Object with key and value that have snapshot.val() in brackets. Inside that IF and after const itemsArray make for loop that have index 0 and itemsArray.length... make const that have propertiy called "currentItem" that equals of itemsArray with index. Then make function appendItem(item) and call it inside.
 onValue(listInDB, function(snapshot) {
 
     if (snapshot.exists()) {
@@ -105,7 +103,8 @@ onValue(listInDB, function(snapshot) {
         }
     })
 
-//make function appendItem() that takes value of item and appends. call it inside of function onValue in loop.
+//Make function called appendItem that has output of item. 
+// 1. make two constants one itemID to have item[0], and itemValue to have item[1] (there is a difference between two, one throws you Id's(key) and another one is throwing you values) 2. make let of newEl, createElement of type li. 3. Add textContent of type itemValue.  on newEl add event lister for double click ("dbClick"), inside of function make new let that have name as exactLocationOfItemInDB with ref(database, `${id}`) and in new line remove(exactLocationItemInDB), then append listEl with value of newEl
 function appendItem(item) {
     let itemID = item[0]
     let itemValue = item[1]
