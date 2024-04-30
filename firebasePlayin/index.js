@@ -107,17 +107,51 @@ onValue(listInDB, function(snapshot) {
 // 1. make two constants one itemID to have item[0], and itemValue to have item[1] (there is a difference between two, one throws you Id's(key) and another one is throwing you values) 2. make let of newEl, createElement of type li. 3. Add textContent of type itemValue.  on newEl add event lister for double click ("dbClick"), inside of function make new let that have name as exactLocationOfItemInDB with ref(database, `${id}`) and in new line remove(exactLocationItemInDB), then append listEl with value of newEl
 function appendItem(item) {
     let itemID = item[0]
-    let itemValue = item[1]
-    clearInputField()
+    let itemValue  = item[1]
+
     let newEl = document.createElement("li")
     newEl.textContent = itemValue
-    newEl.classList.add = "story"
     newEl.addEventListener("dblclick", function() {
         let exactLocationOfItemInDB = ref(database, `someList/${itemID}`)
-         remove(exactLocationOfItemInDB)
+        remove(exactLocationOfItemInDB)
     })
     listEl.append(newEl)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function appendItem(item) {
+//     let itemID = item[0]
+//     let itemValue = item[1]
+//     clearInputField()
+//     let newEl = document.createElement("li")
+//     newEl.textContent = itemValue
+//     newEl.classList.add = "story"
+//     newEl.addEventListener("dblclick", function() {
+//         let exactLocationOfItemInDB = ref(database, `someList/${itemID}`)
+//          remove(exactLocationOfItemInDB)
+//     })
+//     listEl.append(newEl)
+// }
 
 // make function clearInputField() that clears input field and call it in. use textContent to append new item
 function clearInputField() {
