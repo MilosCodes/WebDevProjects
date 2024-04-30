@@ -1,12 +1,17 @@
 
-import {initializeApp} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+import {FirebaseError, initializeApp} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import {getDatabase, ref, push, onValue, remove} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
-
+// import { FirebaseError, initializeApp } from "firebase/app";
 
 const appSettings = {
-    databaseURL: "https://fir-play-82d51-default-rtdb.europe-west1.firebasedatabase.app/"
-}
-
+    apiKey: "AIzaSyC8r7SZTvep5_lrNd2ykNAFW8eAtcFoomM",
+    authDomain: "fir-play-82d51.firebaseapp.com",
+    databaseURL: "https://fir-play-82d51-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "fir-play-82d51",
+    storageBucket: "fir-play-82d51.appspot.com",
+    messagingSenderId: "210615019316",
+    appId: "1:210615019316:web:ca5097a2ecc1cd48806761"
+  }
 
 // const app = initializeApp(appSettings)
 // const database = getDatabase(app)
@@ -58,6 +63,7 @@ const appSettings = {
 // }
 
 // create constants for app, database, and ref
+// firebase.initializeApp(appSettings)
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
 const listInDB = ref(database, "someList")
@@ -68,6 +74,36 @@ const listInDB = ref(database, "someList")
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const listEl = document.getElementById("some-list")
+
+
+
+let fileText = document.querySelector(".fileText")
+let uploadPercentage = document.querySelector(".uploadPercentage")
+let progress = document.querySelector(".progress")
+let precentVal
+let fileItem
+let fileName
+
+export function getFile(e) {
+    fileItem = e.target.files[0]
+    fileName = fileItem.name
+    fileText.innerHTML = fileName
+}
+function uploadImage() {
+    let storageRef = firebase.storage().ref("images" + fileName)
+    let uploadTask = storageRef.put(fileName)
+    uploadTask.on("state_changed", (snapshot)=>{
+        precentVal = Math.floor((snapshot.bytesTransferred/snapshot.totalBytes)*100)
+        uploadPercentage.innerHTML = precentVal+"%"
+        progress.style.width=precentVal+"%"
+    },(error)=>{
+        console.log("error", error)
+    },()=> {
+        uploadTask.snapshot.ref.getDownloadURL().then((url)=>{
+            console.log("URL", url)
+        })
+    })
+}
 
 addButtonEl.addEventListener("click", function() {
     addingInputValue()
