@@ -39,22 +39,6 @@
     <script src="index.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src=""https://www.gstatic.com/firebasejs/9.15.0/firebase.js""></script>
-    <script>
-        function uploadImage() {
-    let storageRef = app.storage().ref("images" + fileName)
-    let uploadTask = storageRef.put(fileName)
-    uploadTask.on("state_changed", (snapshot)=>{
-        precentVal = Math.floor((snapshot.bytesTransferred/snapshot.totalBytes)*100)
-        uploadPercentage.innerHTML = precentVal+"%"
-        progress.style.width=precentVal+"%"
-    },(error)=>{
-        console.log("error", error)
-    },()=> {
-        uploadTask.snapshot.ref.getDownloadURL().then((url)=>{
-            console.log("URL", url)
-        })
-    })
-}
-    </script>
+    
 </body>
 </html>
